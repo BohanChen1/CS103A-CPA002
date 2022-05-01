@@ -116,7 +116,7 @@ app.use(function (err, req, res, next) {
   res.render("error");
 });
 
-process.env.PORT || "5000";
+const port = process.env.PORT || "5151";
 app.set("port", port);
 
 const http = require("http");
