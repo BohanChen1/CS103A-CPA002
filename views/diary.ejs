@@ -1,0 +1,36 @@
+<h2>My diaries</h2>
+
+    <hr>
+    
+        <% for (item of items){%>
+            <div class="bg-light m-5 p-2 border border-primary border-2">          
+                <b>title: <%= item.title%></b>
+                <br>
+                <%= item.createdAt %>
+                <br>
+                weather: <%= item.weather %>
+                <br>
+                <a href="/diary/show/<%= item._id%>">view</a>
+                <a href="/diary/delete/<%= item._id%>">delete</a>
+                
+            </div>
+        <% }%>
+        
+    <hr>
+    <form method="post" action="/diary/add">
+        <div class="bg-light m-5 p-2 border border-primary border-2">
+            title:<br><input type="text" name="title"><br><br>
+            weather:<select name="weather" id="weather">
+                <option value="sunny">sunny</option>
+                <option value="rainy">rainy</option>
+                <option value="cloudy">cloudy</option>
+                <option value="snowy">snowy</option>
+                <option value="foggy">foggy</option>
+              </select><br><br>
+            content:<br><textarea id="content" name="content" rows="4" cols="50"></textarea><br><br>
+            <input type="submit" value="Add to diary list"><br>
+        </div>
+    </form>
+    
+
+
