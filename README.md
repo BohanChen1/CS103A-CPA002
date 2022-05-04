@@ -1,3 +1,6 @@
+## Instruction
+The webapp allows user to record their daily life on this simple page. Just simply go to the "diaries" tap in the nav bar and start writing your diaries and add them to your list!
+
 ## Installation
 Download the project from github and download nodejs and npm from https://nodejs.org
 and cd into the folder
